@@ -1,0 +1,90 @@
+.cakeDetails__section {
+  min-height: 100vh;
+  background-color: var(--white__color);
+  font-size: var(--fontSize__135rem);
+}
+.nonAuthComp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.nonAuthComp__gap {
+  gap: 1rem;
+}
+
+.cakeDetails__content {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.cakeDetails__image {
+  max-width: 50rem;
+  max-height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-basis: 50%;
+}
+
+.cakeDetails__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  gap: 1rem;
+  width: 100%;
+}
+.cakeDetails__price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
+.cakeDetails__quantity {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cakeDetails__quantity__buttons {
+  gap: 1rem;
+}
+.cakeDetails__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .cakeDetails__content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .cakeDetails__image {
+    flex-basis: 100%;
+  }
+  .cakeDetails__body {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cakeDetails__section {
+    font-size: var(--fontSize__125rem);
+  }
+}
+@media screen and (max-width: 450px) {
+  .cakeDetails__section {
+    font-size: var(--fontSize__125rem);
+  }
+}

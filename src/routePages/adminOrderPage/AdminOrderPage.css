@@ -1,0 +1,128 @@
+.order__section {
+  min-height: 90vh;
+  margin-top: 5.6rem;
+  gap: 3rem;
+  background-color: var(--white__color);
+  font-size: var(--fontSize__135rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newOrder__content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.newOrder__deliveryMode {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-basis: 25%;
+}
+.newOrder__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  gap: 1rem;
+}
+.details__orderTime {
+  display: flex;
+  gap: 6rem;
+}
+.details__customer {
+  display: flex;
+  gap: 7rem;
+}
+.customer__name,
+.customer__email,
+.customer__phone,
+.payment__status,
+.payment__amount {
+  display: flex;
+  gap: 1rem;
+}
+.customer__address {
+  display: flex;
+  flex-direction: column;
+}
+.details__items {
+  display: flex;
+  gap: 4rem;
+}
+.items__ordered {
+  display: flex;
+  gap: 1rem;
+}
+.details__payment {
+  display: flex;
+  gap: 2.5rem;
+}
+.details__delivered {
+  display: flex;
+  gap: 3rem;
+}
+.details__deliveredTime {
+  display: flex;
+  gap: 4.75rem;
+}
+.newOrder__deliveredButton {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-basis: 25%;
+}
+.ordered__image {
+  width: 12rem;
+  height: 12rem;
+}
+.ordered__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .newOrder__deliveryMode {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .newOrder__content {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  .details__orderTime,
+  .details__deliveredTime {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .details__customer,
+  .details__items,
+  .details__payment {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .details__delivered {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .order__section {
+    font-size: var(--fontSize__125rem);
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .ordered__image {
+    width: 8rem;
+    height: 8rem;
+  }
+}

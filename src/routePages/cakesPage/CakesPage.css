@@ -1,0 +1,42 @@
+.cakes__section {
+  min-height: 85vh;
+  margin-top: 5.6rem;
+  gap: 3rem;
+  background-color: var(--white__color);
+  font-size: var(--fontSize__135rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cakes__contentDiv {
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 0 8rem;
+}
+@media screen and (max-width: 1270px) {
+  .cakes__contentDiv {
+    padding: 0;
+  }
+}
+
+.cakes__content {
+  flex-basis: 17%;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.cakesContent__body {
+  gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cakes__section {
+    font-size: var(--fontSize__125rem);
+  }
+}
+@media screen and (max-width: 450px) {
+  .cakes__section {
+    font-size: var(--fontSize__125rem);
+  }
+}

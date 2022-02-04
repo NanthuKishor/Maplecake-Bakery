@@ -1,0 +1,7 @@
+.profile__email{
+    display: flex;
+    justify-content: space-between;
+}
+.profile__password{
+    gap: 1rem;
+}

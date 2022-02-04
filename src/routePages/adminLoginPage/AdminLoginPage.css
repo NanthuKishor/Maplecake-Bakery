@@ -1,0 +1,18 @@
+.adminLogin__section {
+  min-height: 100vh;
+  gap: 3rem;
+  background-color: var(--white__color);
+  font-size: var(--fontSize__135rem);
+}
+
+.notAdmin__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .adminLogin__section {
+    font-size: var(--fontSize__125rem);
+  }
+}

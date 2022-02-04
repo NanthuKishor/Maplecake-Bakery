@@ -1,0 +1,30 @@
+.floatingButton__Link {
+  color: black;
+  background-color: white;
+}
+.floatingButton__activeLink {
+  color: yellow;
+  background-color: #6082b6;
+}
+
+.floatingButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  height: 4rem;
+  border: 1px solid #6082b6;
+  box-shadow: 3px 3px 6px rgba(96, 130, 182, 0.5);
+  border-radius: 1rem;
+}
+.floatingButton:hover {
+  background-color: #6082b6;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 450px) {
+  .floatingButton {
+    width: 45%;
+    height: 3rem;
+  }
+}

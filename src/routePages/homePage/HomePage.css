@@ -1,0 +1,27 @@
+.home__section {
+  gap: 3rem;
+  background-color: var(--white__color);
+  font-size: var(--fontSize__135rem);
+}
+
+.home__productsDiv{
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.home__content{
+  flex-basis: 25%;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .home__section {
+    font-size: var(--fontSize__125rem);
+  }
+}
+@media screen and (max-width: 450px) {
+  .home__section {
+    font-size: var(--fontSize__125rem);
+  }
+}

@@ -1,0 +1,214 @@
+.link__whiteColor {
+  color: var(--white__color);
+}
+.link__blackColor {
+  color: var(--black__color);
+}
+.transparent__bg {
+  background-color: transparent;
+}
+.scroll__background {
+  background-color: #6082b6;
+  box-shadow: 0 0.5px 6px black;
+}
+.notHome__background {
+  background-color: #6082b6;
+  box-shadow: 0 0.5px 6px black;
+}
+.toggle__bg {
+  background-color: #6082b6;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.navbar__transition {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav li {
+  list-style: none;
+}
+nav a {
+  color: var(--white__color);
+}
+
+.navbar__section {
+  display: grid;
+  grid-template-columns: 8rem auto 1fr 5rem 8rem;
+}
+
+.navbar__brand {
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: flex-start;
+  font-size: var(--fontSize__200rem);
+}
+
+.navbar__menu__ul {
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  grid-column: 3/4;
+  font-size: var(--fontSize__150rem);
+}
+.navbar__menu__ul ul {
+  display: flex;
+}
+.navbar__menu__ul li {
+  padding: 0 2rem;
+}
+.navbar__menu__cart {
+  padding: 1.5rem 0;
+  justify-self: flex-end;
+  grid-column: 4/5;
+}
+
+.navbar__menu__ul a:hover,
+.navbar__menu__cart a:hover {
+  color: yellow;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+.navbar__menu__toggle {
+  display: none;
+}
+
+.navbar__menu__ul__active {
+  position: absolute;
+  top: 5.2rem;
+  /* left: 50%; */
+  left: -50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: -webkit-translate(-50%, 0);
+  -moz-transform: -moz-translate(-50%, 0);
+  -ms-transform: -ms-translate(-50%, 0);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  -webkit-animation: slideIn-fromLeft 0.5s forwards;
+  -moz-animation: slideIn-fromLeft 0.5s forwards;
+  -ms-animation: slideIn-fromLeft 0.5s forwards;
+  animation: slideIn-fromLeft 0.5s forwards;
+}
+@keyframes slideIn-fromLeft {
+  100% {
+    left: 49.99999%;
+  }
+}
+@-webkit-keyframes slideIn-fromLeft {
+  100% {
+    left: 49.99999%;
+  }
+}
+@-moz-keyframes slideIn-fromLeft {
+  100% {
+    left: 49.99999%;
+  }
+}
+@-ms-keyframes slideIn-fromLeft {
+  100% {
+    left: 49.99999%;
+  }
+}
+
+.navbar__menu__ul__active ul {
+  display: block;
+  align-items: center;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.navbar__menu__ul__active li {
+  display: block;
+  text-align: center;
+  width: 100%;
+  line-height: 6rem;
+  gap: 1rem;
+}
+.navbar__menu__ul__active li:hover {
+  background-color: red;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+}
+.navbar__menu__ul__active a {
+  display: block;
+  width: 100%;
+  font-size: var(--fontSize__135rem);
+}
+
+@media screen and (max-width: 900px) {
+  .navbar__section {
+    grid-template-columns: 5rem auto 1fr 7rem 7rem 5rem;
+  }
+  .navbar__brand {
+    grid-column: 2/3;
+  }
+  .navbar__menu__cart {
+    grid-column: 4/5;
+    justify-self: flex-start;
+    align-self: center;
+  }
+  .navbar__menu__toggle {
+    display: grid;
+    grid-column: 5/6;
+    justify-self: flex-end;
+    align-self: center;
+    font-size: var(--fontSize__150rem);
+  }
+  .navbar__menu__ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar__section {
+    grid-template-columns: 3rem auto 1fr 5rem 5rem 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navbar__section {
+    grid-template-columns: 1.5rem auto 4rem 4rem 1.5rem;
+  }
+  .navbar__brand {
+    font-size: var(--fontSize__175rem);
+  }
+  .navbar__menu__cart {
+    grid-column: 3/4;
+    justify-self: center;
+  }
+  .navbar__menu__toggle {
+    grid-column: 4/5;
+    justify-self: flex-end;
+  }
+  .navbar__menu__ul__active ul a {
+    font-size: var(--fontSize__125rem);
+  }
+  .navbar__menu__ul__active li {
+    line-height: 5rem;
+  }
+}

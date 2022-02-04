@@ -1,0 +1,26 @@
+.adminNavbar__menu__ul {
+  display: grid;
+  grid-template-rows: 5.15rem;
+  width: 100%;
+}
+
+.adminNavbar__menu__ul ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: var(--fontSize__150rem);
+}
+
+.adminNavbar__menu__ul a:hover {
+  color: yellow;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 450px) {
+  .adminNavbar__menu__ul a {
+    font-size: var(--fontSize__135rem);
+  }
+}

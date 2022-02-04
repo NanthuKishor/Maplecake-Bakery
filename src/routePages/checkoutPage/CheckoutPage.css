@@ -1,0 +1,85 @@
+.checkout__section {
+  margin-top: 5.6rem;
+  min-height: 100vh;
+  gap: 3rem;
+  background-color: var(--white__color);
+  font-size: var(--fontSize__135rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout__formDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  width: 100%;
+}
+.checkout__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.form__email {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__address {
+  display: flex;
+  flex-direction: column;
+}
+.form__address label {
+  padding-bottom: 1rem;
+}
+.form__phone {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.form__phone__flex {
+  display: flex;
+  flex-direction: column;
+}
+.form__phone__flex:first-child {
+  flex-basis: 40%;
+}
+.form__phone__flex:nth-child(1) {
+  flex-basis: 60%;
+}
+
+.form__email small,
+.form__phone small {
+  color: var(--grey__color);
+}
+
+.region__dropdown {
+  height: 4rem;
+  margin-bottom: 0.75rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.region__dropdown:hover {
+  border: 0.5px solid black;
+  transition: all 0s ease-in-out;
+}
+
+.stripe__payment__error {
+  color: #e71f1f;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .checkout__section {
+    font-size: var(--fontSize__125rem);
+  }
+  .checkout__formDiv {
+    max-width: 25rem;
+    /* width: 80%; */
+  }
+}

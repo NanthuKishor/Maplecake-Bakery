@@ -1,0 +1,9 @@
+.paymentResult__section {
+  min-height: 100vh;
+  gap: 3rem;
+  background-color: var(--white__color);
+  font-size: var(--fontSize__135rem);
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
