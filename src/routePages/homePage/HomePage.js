@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./HomePage.css";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
@@ -14,6 +15,10 @@ const HomePage = () => {
     status,
     error,
   } = useSelector((state) => state.cakes);
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   //navigate to the cakesDetails page.
   let navigate = useNavigate();
@@ -69,7 +74,7 @@ const HomePage = () => {
             size="small"
             sx={{
               fontSize: 11,
-              textTransform: "capitalize"
+              textTransform: "capitalize",
             }}
             onClick={handleSeeMoreClick}
           >

@@ -1,5 +1,5 @@
 .header__section {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(
       360deg,
       hsla(37, 100%, 80%, 0.2),
@@ -8,7 +8,7 @@
     url("../../../public/images/website-background.jpg");
   background-repeat: no-repeat;
   background-clip: border-box;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
