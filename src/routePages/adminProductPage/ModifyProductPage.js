@@ -6,6 +6,7 @@ import LoadingBar from "../../components/loadingBar/LoadingBar";
 import "./AdminProductPage.css";
 import Button from "@mui/material/Button";
 import { useNavigate, Outlet } from "react-router-dom";
+import { cakesFetch } from "../../features/cakesSlice";
 
 const ModifyProductPage = () => {
   const { items, status, error } = useSelector((state) => state.cakes);
@@ -14,6 +15,7 @@ const ModifyProductPage = () => {
 
   useEffect(() => {
     window.scroll(0, 0);
+    dispatch(cakesFetch());
   }, [dispatch]);
 
   const handleDeleteClick = (id) => {
