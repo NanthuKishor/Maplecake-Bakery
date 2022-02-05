@@ -19,6 +19,10 @@ import { addAdmin, removeAdmin } from "./features/authSlice";
 import ProtectedRoutes from "./components/protectedRoutes/ProtectedRoutes";
 import ForgotPasswordModal from "./components/modals/ForgotPasswordModal";
 import AdminProfilePage from "./routePages/adminProfilePage/AdminProfilePage";
+import DeleteOrderModal from "./components/modals/DeleteOrderModal";
+const PageNotFound = React.lazy(() =>
+  import("./routePages/pageNotFound/PageNotFound")
+);
 const NewOrderPage = React.lazy(() =>
   import("./routePages/adminOrderPage/NewOrderPage")
 );
@@ -83,8 +87,22 @@ function App() {
               </Suspense>
             }
           >
-            <Route path="delete/:id" element={<DeleteModal />} />
-            <Route path="modify/:id" element={<ModifyModal />} />
+            <Route
+              path="delete/:id"
+              element={
+                <ProtectedRoutes>
+                  <DeleteModal />
+                </ProtectedRoutes>
+              }
+            />
+            <Route
+              path=":id"
+              element={
+                <ProtectedRoutes>
+                  <ModifyModal />
+                </ProtectedRoutes>
+              }
+            />
           </Route>
           <Route
             path="/a/admin/products"
@@ -115,7 +133,16 @@ function App() {
                 </ProtectedRoutes>
               </Suspense>
             }
-          />
+          >
+            <Route
+              path="delete-order/:id"
+              element={
+                <ProtectedRoutes>
+                  <DeleteOrderModal />
+                </ProtectedRoutes>
+              }
+            />
+          </Route>
           <Route
             path="/a/admin-login"
             element={
@@ -163,6 +190,14 @@ function App() {
             }
           />
           <Route path="/" element={<HomePage />} />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<LoadingBar />}>
+                <PageNotFound />
+              </Suspense>
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>

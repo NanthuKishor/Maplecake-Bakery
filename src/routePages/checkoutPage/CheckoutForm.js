@@ -94,7 +94,7 @@ const CheckoutForm = ({ deliveryType }) => {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: "http://localhost:3000/s/payment",
+        return_url: "https://maplecake-bakery.web.app/s/payment",
       },
     });
     //if an error in confirming stripe payment.

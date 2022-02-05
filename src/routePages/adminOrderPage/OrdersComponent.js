@@ -108,20 +108,37 @@ const OrdersComponent = ({ data, handleClick }) => {
         ) : null}
       </div>
       <div className="newOrder__deliveredButton">
-        <Button
-          key={data?.id}
-          type="submit"
-          color="secondary"
-          variant="contained"
-          size="small"
-          disabled={data?.delivered ? true : false}
-          sx={{
-            fontSize: 12,
-          }}
-          onClick={() => handleClick(data?.id)}
-        >
-          Delivered
-        </Button>
+        {data?.delivered ? (
+          <Button
+            key={data?.id}
+            type="submit"
+            color="secondary"
+            variant="contained"
+            size="small"
+            // disabled={data?.delivered ? true : false}
+            sx={{
+              fontSize: 12,
+            }}
+            onClick={() => handleClick(data?.id)}
+          >
+            Delete
+          </Button>
+        ) : (
+          <Button
+            key={data?.id}
+            type="submit"
+            color="secondary"
+            variant="contained"
+            size="small"
+            // disabled={data?.delivered ? true : false}
+            sx={{
+              fontSize: 12,
+            }}
+            onClick={() => handleClick(data?.id)}
+          >
+            Delivered
+          </Button>
+        )}
       </div>
     </div>
   );

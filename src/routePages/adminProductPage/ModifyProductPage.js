@@ -21,7 +21,7 @@ const ModifyProductPage = () => {
   };
 
   const handleModifyClick = (id) => {
-    navigate(`modify/${id}`);
+    navigate(`${id}`);
   };
 
   return (

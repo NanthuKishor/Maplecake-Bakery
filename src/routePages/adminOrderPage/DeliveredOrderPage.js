@@ -6,6 +6,7 @@ import LoadingBar from "../../components/loadingBar/LoadingBar";
 import { ordersFetch } from "../../features/ordersSlice";
 import "./AdminOrderPage.css";
 import OrdersComponent from "./OrdersComponent";
+import { useNavigate, Outlet } from "react-router-dom";
 
 const DeliveredOrderPage = () => {
   const dispatch = useDispatch();
@@ -14,11 +15,18 @@ const DeliveredOrderPage = () => {
   );
   console.log(deliveredOrders);
 
+  let navigate = useNavigate();
+
   useEffect(() => {
     window.scroll(0, 0);
     dispatch(ordersFetch());
     console.log("dispatched");
   }, [dispatch]);
+
+  const handleDeleteClick = (id) => {
+    navigate(`delete-order/${id}`);
+  };
+
   return (
     <div>
       <AdminNavbar />
@@ -32,6 +40,7 @@ const DeliveredOrderPage = () => {
             />
           </div>
           <h3>Delivered Orders({deliveredOrdersCount})</h3>
+          <Outlet />
           {status ? (
             <LoadingBar />
           ) : error ? (
@@ -40,7 +49,13 @@ const DeliveredOrderPage = () => {
             <h3 className="success">No Delivered Orders available.</h3>
           ) : (
             deliveredOrders
-              ?.map((data) => <OrdersComponent key={data?.id} data={data} />)
+              ?.map((data) => (
+                <OrdersComponent
+                  key={data?.id}
+                  data={data}
+                  handleClick={handleDeleteClick}
+                />
+              ))
               .reverse()
           )}
         </div>

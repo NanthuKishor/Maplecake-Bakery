@@ -1,6 +1,6 @@
 .adminLogin__section {
   min-height: 100vh;
-  gap: 3rem;
+  gap: 2rem;
   background-color: var(--white__color);
   font-size: var(--fontSize__135rem);
 }

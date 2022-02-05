@@ -8,7 +8,6 @@ import { db } from "../../firebaseConfig";
 import Button from "@mui/material/Button";
 import { toast } from "react-toastify";
 import { useState } from "react";
-import { cakesFetch } from "../../features/cakesSlice";
 import { ordersFetch } from "../../features/ordersSlice";
 
 const DeleteOrderModal = () => {

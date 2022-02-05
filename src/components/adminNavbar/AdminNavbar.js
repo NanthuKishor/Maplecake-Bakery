@@ -4,6 +4,7 @@ import { removeAdmin } from "../../features/authSlice";
 import "./AdminNavbar.css";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
+import { toast } from "react-toastify";
 
 const AdminNavbar = () => {
   let navigate = useNavigate();
@@ -13,6 +14,7 @@ const AdminNavbar = () => {
     signOut(auth)
       .then(() => {
         navigate("/a/admin-login", { replace: true });
+        toast.success("Successfully logged out");
       })
       .catch((error) => {
         alert(error.message);
