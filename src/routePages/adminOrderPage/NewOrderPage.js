@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AdminNavbar from "../../components/adminNavbar/AdminNavbar";
 import FloatingButton from "../../components/floatingActionButton/FloatingButton";
@@ -15,7 +15,7 @@ const NewOrderPage = () => {
   const { newOrders, newOrdersCount, status, error } = useSelector(
     (state) => state.orders
   );
-  console.log(newOrders);
+  const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -24,12 +24,14 @@ const NewOrderPage = () => {
   }, [dispatch]);
 
   const handleDeliveredClick = async (id) => {
+    setClicked(true);
     const ordersRef = doc(db, "orders", id);
     await updateDoc(ordersRef, {
       delivered: true,
       delivered_time: serverTimestamp(),
     }).then(() => {
       dispatch(ordersFetch());
+      setClicked(false);
       toast.success("Successfully updated Delivery Status");
     });
   };
@@ -59,6 +61,7 @@ const NewOrderPage = () => {
                 key={data?.id}
                 data={data}
                 handleClick={handleDeliveredClick}
+                clicked={clicked}
               />
             ))
           )}

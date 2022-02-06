@@ -46,7 +46,7 @@ const RemoveModal = () => {
         ></div>
         <div className="removeModal__content">
           <p>
-            You are about to Remove <br /> "{rCake?.name?.toUpperCase()}"
+            You are about to Remove <br /> "{rCake?.name}"
           </p>
           <div className="removeModal__buttonDiv br__padding__top">
             <Button

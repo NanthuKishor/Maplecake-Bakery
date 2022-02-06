@@ -64,11 +64,7 @@ const ModifyModal = () => {
     }).then(() => {
       navigate("/a/admin/products/modify", { replace: true });
       dispatch(cakesFetch());
-      toast.success(
-        `Updated "${
-          data?.name?.charAt(0).toUpperCase() + data?.name?.slice(1)
-        }" `
-      );
+      toast.success(`Updated "${data?.name}" successfully`);
     });
   };
 

@@ -42,11 +42,7 @@ const DeleteModal = () => {
     await deleteDoc(doc(db, "cakes", cake?.id)).then(() => {
       navigate("/a/admin/products/modify", { replace: true });
       dispatch(cakesFetch());
-      toast.error(
-        `Deleted "${
-          cake?.name?.charAt(0).toUpperCase() + cake?.name?.slice(1)
-        }" `
-      );
+      toast.error(`Deleted "${cake?.name}" `);
     });
   };
 
@@ -60,7 +56,7 @@ const DeleteModal = () => {
         ></div>
         <div className="removeModal__content">
           <p>
-            You are about to Delete <br /> "{dCake?.name?.toUpperCase()}"
+            You are about to Delete <br /> "{dCake?.name}"
           </p>
           <div className="removeModal__buttonDiv br__padding__top">
             <Button

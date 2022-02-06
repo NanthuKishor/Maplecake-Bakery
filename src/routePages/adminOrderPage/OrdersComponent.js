@@ -2,7 +2,7 @@ import CustomerDetails from "./CustomerDetails";
 import ItemsDetails from "./ItemsDetails";
 import Button from "@mui/material/Button";
 
-const OrdersComponent = ({ data, handleClick }) => {
+const OrdersComponent = ({ data, handleClick, clicked }) => {
   return (
     <div className="newOrder__content content__card">
       <div className="newOrder__deliveryMode">
@@ -115,7 +115,6 @@ const OrdersComponent = ({ data, handleClick }) => {
             color="secondary"
             variant="contained"
             size="small"
-            // disabled={data?.delivered ? true : false}
             sx={{
               fontSize: 12,
             }}
@@ -130,7 +129,7 @@ const OrdersComponent = ({ data, handleClick }) => {
             color="secondary"
             variant="contained"
             size="small"
-            // disabled={data?.delivered ? true : false}
+            disabled={clicked ? true : false}
             sx={{
               fontSize: 12,
             }}

@@ -20,12 +20,7 @@ const cartSlice = createSlice({
       state.cartItems = selectedCake;
       state.cartItems.push(action.payload);
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      toast.success(
-        `"${
-          action.payload?.name?.charAt(0).toUpperCase() +
-          action.payload?.name?.slice(1)
-        }" added to Cart`
-      );
+      toast.success(`"${action.payload?.name}" added to Cart`);
     },
     removeFromCart: (state, action) => {
       const updatedList = state.cartItems?.filter(
@@ -33,12 +28,7 @@ const cartSlice = createSlice({
       );
       state.cartItems = updatedList;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      toast.error(
-        `Removed "${
-          action.payload?.name?.charAt(0).toUpperCase() +
-          action.payload?.name?.slice(1)
-        }" `
-      );
+      toast.error(`"${action.payload?.name}" removed from Cart `);
     },
     increaseCartQty: (state, action) => {
       const updatedCart = state.cartItems?.map((cake) => {
