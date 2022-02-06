@@ -18,7 +18,7 @@ export const addProductFormSchema = yup
       .string()
       .matches(
         /^[0-9]+(?:\.[0-9]{1,2})?$/,
-        "Price should be in ex: 99 or 99.00 format"
+        "Ex: 99, 99.00, 99.50, 100, 100.99 etc"
       )
       .required("Item price is required"),
     description: yup

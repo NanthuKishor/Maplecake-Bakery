@@ -175,7 +175,7 @@ const CartPage = () => {
                   <strong className="grey__text">Total price: </strong>
                 </p>
                 <p>
-                  <strong>${cartTotalCost.toFixed(2)}</strong>
+                  <strong>${cartTotalCost?.toFixed(2)}</strong>
                 </p>
               </div>
               <div className="cart__radioDelivery br__padding__top br__padding__bottom">

@@ -25,17 +25,14 @@ const CheckoutPage = () => {
   );
   let navigate = useNavigate();
 
+  console.log(window.location.search);
+  console.log(total);
+  console.log(cartTotalCost);
   // to create PaymentIntent as soon as the page loads.
-  useEffect(() => {
-    axios
-      .post("/create-payment-intent", {
-        data: cartTotalCost,
-      })
-      .then((res) => setClientSecret(res.data.clientSecret))
-      .catch((error) => console.log(error));
-  }, [cartTotalCost]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     //if not matching, then redirect to cart.
     if (quantity !== cartItemNumber || total !== cartTotalCost) {
       navigate("/cart", { replace: true });
@@ -44,6 +41,15 @@ const CheckoutPage = () => {
       navigate("/cart", { replace: true });
     }
   }, [cartItemNumber, quantity, navigate, total, cartTotalCost, deliveryType]);
+
+  useEffect(() => {
+    axios
+      .post("/create-payment-intent", {
+        data: cartTotalCost,
+      })
+      .then((res) => setClientSecret(res.data.clientSecret))
+      .catch((error) => console.log(error));
+  }, [cartTotalCost]);
 
   const appearance = {
     theme: "stripe",

@@ -23,8 +23,8 @@ const formDataSlice = createSlice({
           phone: `${action.payload?.dialerCode}-${action.payload?.phone}`,
           address: `${action.payload?.street}, ${action.payload?.city}, ${action.payload?.state}, ${action.payload?.country}, ${action.payload?.zipCode}`,
         },
-        items_ordered: action.payload.purchased_items,
-        delivered: action.payload.delivered,
+        items_ordered: action.payload?.purchased_items,
+        delivered: action.payload?.delivered,
         delivery_mode: action.payload?.deliveryMode,
       };
       state.formData = formData;

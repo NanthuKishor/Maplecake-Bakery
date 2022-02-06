@@ -38,6 +38,9 @@ const CakeDetailsPage = () => {
   //add to cart click handler.
   const addToCartHandler = (selectedCake) => {
     dispatch(addToCart(selectedCake));
+    setTimeout(() => {
+      navigate(-1, { replace: true });
+    }, 500);
   };
 
   //go to the previous page.
@@ -50,7 +53,9 @@ const CakeDetailsPage = () => {
     <main>
       <div className="cakeDetails__section section__sha-bor-pad">
         {status ? (
-          <LoadingBar />
+          <div className="cakeDetails__section column__flex">
+            <LoadingBar />
+          </div>
         ) : error ? (
           <h3 className="error">{error}</h3>
         ) : (

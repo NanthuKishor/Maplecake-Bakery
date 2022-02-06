@@ -70,7 +70,13 @@ function App() {
           <Route
             path="/a/admin/profile"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <ProtectedRoutes>
                   <AdminProfilePage />
                 </ProtectedRoutes>
@@ -80,7 +86,13 @@ function App() {
           <Route
             path="/a/admin/products/modify"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <ProtectedRoutes>
                   <ModifyProductPage />
                 </ProtectedRoutes>
@@ -107,7 +119,13 @@ function App() {
           <Route
             path="/a/admin/products"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <ProtectedRoutes>
                   <AddProductPage />
                 </ProtectedRoutes>
@@ -117,7 +135,13 @@ function App() {
           <Route
             path="/a/admin/orders"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <ProtectedRoutes>
                   <NewOrderPage />
                 </ProtectedRoutes>
@@ -127,7 +151,13 @@ function App() {
           <Route
             path="/a/admin/orders/delivered"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <ProtectedRoutes>
                   <DeliveredOrderPage />
                 </ProtectedRoutes>
@@ -146,7 +176,13 @@ function App() {
           <Route
             path="/a/admin-login"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <AdminLoginPage />
               </Suspense>
             }
@@ -156,7 +192,13 @@ function App() {
           <Route
             path="/s/payment"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <PaymentResultPage />
               </Suspense>
             }
@@ -165,7 +207,13 @@ function App() {
           <Route
             path="/cakes"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <CakesPage />
               </Suspense>
             }
@@ -174,7 +222,13 @@ function App() {
           <Route
             path="/cart"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <CartPage />
               </Suspense>
             }
@@ -184,7 +238,13 @@ function App() {
           <Route
             path="/reach-us"
             element={
-              <Suspense fallback={<LoadingBar />}>
+              <Suspense
+                fallback={
+                  <div className="loadingBarCenter">
+                    <LoadingBar />
+                  </div>
+                }
+              >
                 <ReachUsPage />
               </Suspense>
             }

@@ -17,7 +17,7 @@ const HomePage = () => {
   } = useSelector((state) => state.cakes);
 
   useEffect(() => {
-    window.scroll(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
   //navigate to the cakesDetails page.

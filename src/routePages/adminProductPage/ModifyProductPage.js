@@ -41,7 +41,7 @@ const ModifyProductPage = () => {
               children="Modify Products"
             />
           </div>
-          <h3>Modify Products</h3>
+          <h3>Modify Products({items?.length})</h3>
           <Outlet />
           {status ? (
             <LoadingBar />

@@ -15,7 +15,7 @@ const CakesPage = () => {
   } = useSelector((state) => state.cakes);
 
   useEffect(() => {
-    window.scroll(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
   //to navigate to the cake details page.

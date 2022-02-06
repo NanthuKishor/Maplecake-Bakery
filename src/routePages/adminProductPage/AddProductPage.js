@@ -42,10 +42,10 @@ const AddProductPage = () => {
     setButtonClicked(true);
     console.log(data);
     const docRef = await addDoc(collection(db, "cakes"), {
-      name: data.name,
-      image: data.image,
-      price: Number(data.price),
-      description: data.description,
+      name: data?.name,
+      image: data?.image,
+      price: Number(data?.price),
+      description: data?.description,
       timeStamp: Timestamp.now(),
     });
     console.log("Document written with ID: ", docRef.id);

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { RegionDropdown, CountryDropdown } from "react-country-region-selector";
@@ -53,19 +53,14 @@ const CheckoutForm = ({ deliveryType }) => {
     setDropdown({ ...dropdown, region: val });
   };
 
-  //to scroll to the top on first load only.
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
-
   // to manage the form submit.
   const products = cartItems.map((item) => {
     return {
-      item_id: item.id,
-      item_name: item.name,
-      item_image: item.image,
-      item_price: item.price,
-      item_quantity: item.qty,
+      item_id: item?.id,
+      item_name: item?.name,
+      item_image: item?.image,
+      item_price: item?.price,
+      item_quantity: item?.qty,
     };
   });
 
