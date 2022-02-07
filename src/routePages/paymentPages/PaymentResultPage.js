@@ -31,7 +31,7 @@ const PaymentResultPage = () => {
     stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
       switch (paymentIntent.status) {
         case "succeeded":
-          setMessage(" You'r payment Succeeded !");
+          setMessage(" Your payment Succeeded !");
           setPaymentData({
             status: paymentIntent.status,
             amount: paymentIntent.amount,
@@ -42,10 +42,10 @@ const PaymentResultPage = () => {
           console.log(paymentIntent);
           break;
         case "processing":
-          setMessage("You'r payment is processing.");
+          setMessage("Your payment is processing.");
           break;
         case "requires_payment_method":
-          setMessage("You'r payment was not successful, please try again.");
+          setMessage("Your payment was not successful, please try again.");
           setTimeout(() => {
             navigate("/cart");
           }, 5000);
