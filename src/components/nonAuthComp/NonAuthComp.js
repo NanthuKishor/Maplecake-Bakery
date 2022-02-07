@@ -7,8 +7,8 @@ const NonAuthComp = () => {
 
   return (
     <div className="cakeDetails__section section__sha-bor-pad nonAuthComp">
-      <h3>You'r not Authenticated to access this page.</h3>
-      <p>If you'r the Admin, kindly Login for access</p>
+      <h3>You're not Authenticated to access this page.</h3>
+      <p>If you're the Admin, kindly Login for access</p>
       <div className="row__flex nonAuthComp__gap">
         <Button
           color="secondary"

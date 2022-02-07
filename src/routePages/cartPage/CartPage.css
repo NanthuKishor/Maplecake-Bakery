@@ -45,7 +45,7 @@
   flex-direction: column;
   gap: 1rem;
   flex: 2;
-  width: auto;
+  width: 100%;
 }
 .cartItem__remove {
   display: flex;
@@ -110,7 +110,7 @@
     width: 8rem;
     height: 8rem;
   }
-  .cartItem__body{
+  .cartItem__body {
     gap: 0.5rem;
   }
   .cart__item {
